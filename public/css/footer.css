@@ -1,0 +1,31 @@
+footer {
+    padding: 35px 80px;
+    background-color: #FC724D;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer ul li .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    footer{
+        padding: 15px 35px;
+        flex-direction: column;
+    }
+
+}

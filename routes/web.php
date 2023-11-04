@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Rute testing
 Route::get('/', function () {
     return view('welcome');
 });
+
+// rute admin
+
+// rute mahasiswa

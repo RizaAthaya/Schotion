@@ -10,6 +10,7 @@
 
 <body>
     @include('navbar')
+    @include('footer')
 
 </body>
 

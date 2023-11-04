@@ -8,7 +8,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 14px 80px;
+    padding: 4px 80px;
 }
 
 nav .logo {
