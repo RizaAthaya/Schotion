@@ -8,9 +8,9 @@
         @if (auth()->check())
             @if (auth()->user()->role === 'admin')
                 <ul class="list">
-                    <li>Scholarship</li>
-                    <li>Competition</li>
-                    <li>Account</li>
+                    <li><a href="/admin/scholarship">Scholarship</a></li>
+                    <li><a href="/admin/competition">Competition</a></li>
+                    <li><a href="/admin/account">Account</a></li>
                 </ul>
                 <div class="buttons">
                     <a href="" class="login">Logout</a>
@@ -35,17 +35,17 @@
                     <div class="mobile-menu" id="mobileMenu">
                         <ul class="mobile-list">
                             <li><a href="/">Home</a></li>
-                            <li><a href="/scholarship">Scholarship</a></li>
-                            <li><a href="/competition">Competition</a></li>
-                            <li><a href="/account">Account</a></li>
+                            <li><a href="/admin/scholarship">Scholarship</a></li>
+                            <li><a href="/admin/competition">Competition</a></li>
+                            <li><a href="/admin/account">Account</a></li>
                         </ul>
                     </div>
                 </div>
             @elseif (auth()->user()->role === 'mahasiswa')
                 <ul class="list">
                     <li><a href="/">Home</a></li>
-                    <li><a href="">Scholarship</a></li>
-                    <li>Competition</li>
+                    <li><a href="/scholarship">Scholarship</a></li>
+                    <li><a href="/competition">Competition</a></li>
                 </ul>
                 <div class="buttons">
                     <a href="{{ route('mahasiswa-logout') }}" class="login">Logout</a>
@@ -72,7 +72,6 @@
                             <li><a href="/">Home</a></li>
                             <li><a href="/scholarship">Scholarship</a></li>
                             <li><a href="/competition">Competition</a></li>
-                            <li><a href="/account">Account</a></li>
                         </ul>
                     </div>
                 </div>
@@ -96,8 +95,8 @@
                 </svg>
                 <div class="mobile-menu" id="mobileMenu">
                     <ul class="mobile-list">
-                        <li><a href="/">Login</a></li>
-                        <li><a href="/account">Register</a></li>
+                        <li><a href="/auth/login">Login</a></li>
+                        <li><a href="/auth/register">Register</a></li>
                     </ul>
                 </div>
             </div>
