@@ -32,6 +32,10 @@ nav .logo {
     text-decoration: none;
 }
 
+nav .logo:hover {
+    color: #d63a0f;
+}
+
 nav ul {
     display: flex;
     gap: 32px;
@@ -48,7 +52,7 @@ nav ul li {
 
 nav .buttons {
     display: flex;
-    gap: 24px;
+    gap: 12px;
     align-items: center;
 }
 
@@ -56,9 +60,21 @@ nav .buttons .login {
     color: #fc724d;
     font-size: 14px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 45px;
     letter-spacing: 0.2px;
     word-wrap: break-word;
+    padding: 0px 15px;
+    width: 60px;
+    text-align: center;
+}
+
+nav .buttons .login:hover {
+    background-color: #fc724d;
+    border: transparent;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.2px;
 }
 
 nav .buttons .register button {
@@ -67,11 +83,14 @@ nav .buttons .register button {
     background-color: #fc724d;
     border: transparent;
     border-radius: 10px;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: inline-flex;
     gap: 8px;
+}
+
+nav .buttons .register button:hover {
+    background-color: #d63a0f;
 }
 
 nav .buttons .register button h3 {
@@ -80,7 +99,7 @@ nav .buttons .register button h3 {
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.2px;
-    word-wrap: break-word;
+    white-space: nowrap;
 }
 
 nav .buttons .register button .arrow {
@@ -101,8 +120,40 @@ nav .buttons .burger {
     display: none;
 }
 
+nav .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 5vw;
+    background-color: #fff;
+    border: 1px solid #d63a0f;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav .mobile-list{
+    display: none;
+}
+
+nav .mobile-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav .mobile-menu.show {
+    display: block;
+}
+
 @media (max-width: 800px) {
     nav {
+        padding: 0px;
+        width: 100vw;
+    }
+
+    nav .all-navbar {
         padding: 6px 35px;
     }
 
@@ -123,5 +174,14 @@ nav .buttons .burger {
 
     nav .buttons .register {
         display: none;
+    }
+
+    nav .mobile-menu.show {
+        display: block;
+    }
+    nav .mobile-list{
+        padding: 10px;
+        margin: 0px;
+        display: block;
     }
 }
