@@ -29,18 +29,16 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <!-- <th>Deskripsi</th> -->
                         <th>Start date</th>
                         <th>End Date</th>
                         <th>Providers</th>
                         <th>Image link</th>
-                        <th>Category ID</th>
+                        <th>Category</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- data -->
-                    {{-- <?php dd($beasiswa); ?> --}}
                     @foreach ($beasiswa as $item)
                         <tr class="row">
                             <td>{{ $item->nama }}</td>
@@ -48,13 +46,13 @@
                             <td>{{ $item->tanggal_berakhir }}</td>
                             <td>{{ $item->penyelenggara }}</td>
                             <td>{{ $item->link_gambar }}</td>
-                            <td>{{ $item->id_kategori_beasiswa }}</td>
+                            <td>{{ $item->kategori }}</td>
                             <!-- Edit and Delete buttons-->
                             <td>
                                 <div class="btn-group actions">
-                                    <a href="{{ url('/scholarship/' . $item->id_beasiswa . '/edit') }}"
+                                    <a href="{{ url('/scholarship/edit/' . $item->id_beasiswa) }}"
                                         class="btn edit">Edit</a>
-                                    <form action="{{ url('/scholarship/' . $item->id_beasiswa) }}" method="post"
+                                    <form action="{{ url('/scholarship/delete/' . $item->id_beasiswa) }}" method="post"
                                         style="display: inline;">
                                         @csrf
                                         @method('DELETE')

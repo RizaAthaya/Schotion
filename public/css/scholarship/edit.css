@@ -5,53 +5,53 @@ body {
 }
 
 /*content----------------------------------------------------------------------------------*/
-.createScholarship {
+.editScholarship {
     padding: 80px 80px;
     min-height: 80vh;
 }
-.createScholarship .header {
+.editScholarship .header {
     padding: 32px 80px;
     text-align: center;
     color: white;
 }
 
-.createScholarship .header h1 {
+.editScholarship .header h1 {
     font-size: 30px;
 }
-.createScholarship .header p {
+.editScholarship .header p {
     font-size: 20px;
 }
 
-.createScholarship .form-grid {
+.editScholarship .form-grid {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
-.createScholarship .container-grid {
+.editScholarship .container-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     margin-bottom: 25px;
 }
-.createScholarship .container-grid .left-grid {
+.editScholarship .container-grid .left-grid {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.createScholarship .form-group {
+.editScholarship .form-group {
     display: flex;
     gap: 3px;
     flex-direction: column;
 }
 
-.createScholarship .form-group label {
+.editScholarship .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 15px;
 }
-.createScholarship .form-group input,
+.editScholarship .form-group input,
 .form-group textarea, .form-group select {
     width: 100%;
     padding: 10px;
@@ -60,26 +60,26 @@ body {
     border: 1px solid #969393;
 }
 
-.createScholarship .button-container {
+.editScholarship .button-container {
     text-align: center;
 
     margin-top: 9px;
 }
-.createScholarship .form-group .description-textarea {
+.editScholarship .form-group .description-textarea {
     width: 100%;
     height: 190px;
     padding: 5px;
     box-sizing: border-box;
 }
 
-.createScholarship .container-grid .right-grid {
+.editScholarship .container-grid .right-grid {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
 }
 
-.createScholarship .container-grid .right-grid .button-container button {
+.editScholarship .container-grid .right-grid .button-container button {
     background: linear-gradient(to right, #6e7b8b, #cd9d45, #6e7b8b);
     color: white;
     border: none;
@@ -94,6 +94,6 @@ body {
     float: right;
 }
 
-.createScholarship .container-grid .right-grid .button-container button:hover {
+.editScholarship .container-grid .right-grid .button-container button:hover {
     background: linear-gradient(to right, #be66be, #ffa500, #be66be);
 }

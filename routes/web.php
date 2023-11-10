@@ -25,10 +25,12 @@ Route::get('/', function () {
 
 
 Route::prefix('scholarship')->group(function () {
+    Route::put('/update/{id}', [BeasiswaController::class, 'update'])->name('scholarship.update');
     Route::get('/', [BeasiswaController::class, 'show'])->name('scholarship.show');
-    Route::get('/createScholar', [BeasiswaController::class, 'create'])->name('scholarship.create');
-    Route::post('/', [BeasiswaController::class, 'store'])->name('scholarship.store');
-    Route::delete('/{id}', [BeasiswaController::class, 'destroy'])->name('scholarship.destroy');
+    Route::get('/edit/{id}', [BeasiswaController::class, 'edit'])->name('scholarship.edit');
+    Route::get('/create', [BeasiswaController::class, 'create'])->name('scholarship.create');
+    Route::post('/store', [BeasiswaController::class, 'store'])->name('scholarship.store');
+    Route::delete('/delete/{id}', [BeasiswaController::class, 'destroy'])->name('scholarship.destroy');
 });
 
 
