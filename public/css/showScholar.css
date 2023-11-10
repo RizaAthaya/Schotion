@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-family: Montserrat;
+    margin: 0;
+    background-image: url("https://drive.google.com/uc?export=view&id=1wdfpOCnNSD1Zsc9lG5SWWIKhkZof3MMG");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Content----------------------------------------------------------------------------------*/
+.showScholar {
+    padding: 80px 80px;
+    min-height: 80vh;
+}
+
+.showScholar .text {
+    display: flex;
+    flex-direction: column;
+    padding: 86px 0px 16px 0px;
+}
+
+.showScholar .header h1 {
+    color: rgba(15, 14, 14, 0.858);
+}
+
+/*Button Add Beasiswa*/
+.showScholar .add {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 100%;
+    background-color: #fc724d;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.showScholar .add:hover {
+    background-color: #d63a0f;
+}
+
+.showScholar .header {
+    display: flex;
+    align-items: center;
+}
+
+.showScholar .heading {
+    margin: 0;
+    margin-right: 20px;
+}
+
+.showScholar .tableCon {
+    border-radius: 12px;
+}
+
+.showScholar .tableCon .custom {
+    margin-bottom: 35px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #fc724d;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.showScholar .tableCon .custom thead {
+    border-radius: 12px;
+}
+
+.showScholar .tableCon .custom thead tr {
+    border-radius: 12px;
+}
+
+.showScholar .tableCon .custom td {
+    padding: 10px;
+    text-align: left;
+}
+.showScholar .tableCon .custom th {
+    padding: 14px 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.showScholar .tableCon .row {
+    border: 1px solid #fc724d;
+
+    background-color: #ffff;
+    font-size: 13px;
+    color: #333;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.showScholar .btn.edit,
+.btn.delete {
+    font-size: 12px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.showScholar .btn.edit {
+    border: 2px solid #c51224;
+    color: #c51224;
+}
+
+.showScholar .btn.delete {
+    border: 2px solid #c51224;
+    background-color: #c51224;
+    color: #fff;
+}
+
+.showScholar .btn.edit:hover {
+    background-color: #c51224;
+    color: #fff;
+}
+
+.showScholar .btn.delete:hover {
+    background-color: #fff;
+    color: #c51224;
+}

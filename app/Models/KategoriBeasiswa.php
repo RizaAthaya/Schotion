@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 class KategoriBeasiswa extends Model
 {
     use HasUlids;
+
     // use HasFactory;
     protected $fillable = [
         'nama',
