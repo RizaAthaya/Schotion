@@ -81,10 +81,10 @@ class BeasiswaController extends Controller
 
             Beasiswa::create($validator);
         } catch (\Throwable $th) {
-            return redirect('/scholarship/create')->with('failed', 'Data beasiswa gagal ditambahkan.' . $th->getMessage());
+            return redirect('/admin/scholarship/create')->with('failed', 'Data beasiswa gagal ditambahkan.' . $th->getMessage());
         }
 
-        return redirect('/scholarship')->with('success', 'Data beasiswa berhasil ditambahkan.');
+        return redirect('/admin/scholarship')->with('success', 'Data beasiswa berhasil ditambahkan.');
     }
 
     public function update(Request $request, $id)
@@ -103,10 +103,10 @@ class BeasiswaController extends Controller
             $updated = Beasiswa::find($id);
             $updated->update($validator);
         } catch (\Throwable $th) {
-            return redirect('/scholarship/edit/' . $id)->with('failed', 'Data beasiswa berhasil diperbarui.');
+            return redirect('/admin/scholarship/edit/' . $id)->with('failed', 'Data beasiswa berhasil diperbarui.');
         }
 
-        return redirect()->route('scholarship.show')->with('success', 'Data beasiswa berhasil diperbarui.');
+        return redirect('/admin/scholarship')->with('success', 'Data beasiswa berhasil diperbarui.');
     }
 
 
@@ -115,6 +115,6 @@ class BeasiswaController extends Controller
         $beasiswa = Beasiswa::find($id);
         $beasiswa->delete();
 
-        return redirect('/scholarship')->with('success', 'Beasiswa berhasil dihapus.');
+        return redirect('/admin/scholarship')->with('success', 'Beasiswa berhasil dihapus.');
     }
 }

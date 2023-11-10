@@ -78,10 +78,10 @@ class LombaController extends Controller
 
             Lomba::create($validator);
         } catch (\Throwable $th) {
-            return redirect('/competition/create')->with('failed', 'Data lomba gagal ditambahkan.' . $th->getMessage());
+            return redirect('/admin/competition/create')->with('failed', 'Data lomba gagal ditambahkan.' . $th->getMessage());
         }
 
-        return redirect('/competition')->with('success', 'Data lomba berhasil ditambahkan.');
+        return redirect('/admin/competition')->with('success', 'Data lomba berhasil ditambahkan.');
     }
 
     public function update(Request $request, $id)
@@ -100,10 +100,10 @@ class LombaController extends Controller
             $updated = Lomba::find($id);
             $updated->update($validator);
         } catch (\Throwable $th) {
-            return redirect('/competition/edit/' . $id)->with('failed', 'Data lomba gagal diperbarui.' . $th->getMessage());
+            return redirect('/admin/competition/edit/' . $id)->with('failed', 'Data lomba gagal diperbarui.' . $th->getMessage());
         }
 
-        return redirect()->route('competition.show')->with('success', 'Data lomba berhasil diperbarui.');
+        return redirect('/admin/competition')->with('success', 'Data lomba berhasil diperbarui.');
     }
 
 
@@ -112,6 +112,6 @@ class LombaController extends Controller
         $lomba = Lomba::find($id);
         $lomba->delete();
 
-        return redirect('/competition')->with('success', 'lomba berhasil dihapus.');
+        return redirect('/admin/competition')->with('success', 'lomba berhasil dihapus.');
     }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Form Add Competition Information</title>
-    <link rel="stylesheet" href="{{ asset('css/competition/create.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/competition/create.css') }}">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <p>Fill the blank to create a valid competition information</p>
         </div>
         <div class="form-grid">
-            <form action="/competition/store" method="post">
+            <form action="/admin/competition/store" method="post">
                 @csrf
                 <div class="container-grid">
                     <div class="left-grid">

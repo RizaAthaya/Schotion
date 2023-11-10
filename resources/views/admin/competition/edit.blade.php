@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Form Edit competition Information</title>
-    <link rel="stylesheet" href="{{ asset('css/competition/edit.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/competition/edit.css') }}">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <p>Fill the blank to edit a competition information</p>
         </div>
         <div class="form-grid">
-            <form action="{{ route('competition.update', ['id' => $lomba->id_lomba]) }}" method="post">
+            <form action="{{ route('admin.competition.update', ['id' => $lomba->id_lomba]) }}" method="post">
                 @csrf
                 @method('PUT')
                 <div class="container-grid">
