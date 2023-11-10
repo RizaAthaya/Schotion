@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Form Edit Scholarship Information</title>
-    <link rel="stylesheet" href="{{ asset('css/scholarship/edit.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/scholarship/edit.css') }}">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <p>Fill the blank to edit a scholarship information</p>
         </div>
         <div class="form-grid">
-            <form action="{{ route('scholarship.update', ['id' => $beasiswa->id_beasiswa]) }}" method="post">
+            <form action="{{ route('admin.scholarship.update', ['id' => $beasiswa->id_beasiswa]) }}" method="post">
                 @csrf
                 @method('PUT')
                 <div class="container-grid">

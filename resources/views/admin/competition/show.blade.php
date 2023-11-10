@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/competition/show.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/competition/show.css') }}">
     <title>Daftar lomba</title>
 </head>
 
@@ -16,7 +16,7 @@
         <div class="text">
             <div class="header">
                 <h1 class="heading">Competition Information</h1>
-                <a href="{{ url('/competition/create') }}" class="add">+</a>
+                <a href="{{ url('/admin/competition/create') }}" class="add">+</a>
             </div>
             <div class="deskripsi">
                 <p>To create, update or delete competition information</p>
@@ -52,9 +52,9 @@
                                 <!-- Edit and Delete buttons-->
                                 <td>
                                     <div class="btn-group actions">
-                                        <a href="{{ url('/competition/edit/' . $item->id_lomba) }}"
+                                        <a href="{{ url('/admin/competition/edit/' . $item->id_lomba) }}"
                                             class="btn edit">Edit</a>
-                                        <form action="{{ url('/competition/delete/' . $item->id_lomba) }}"
+                                        <form action="{{ url('/admin/competition/delete/' . $item->id_lomba) }}"
                                             method="post" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
