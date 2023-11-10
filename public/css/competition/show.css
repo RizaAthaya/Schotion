@@ -1,0 +1,134 @@
+body {
+    background-image: url("https://drive.google.com/uc?export=view&id=1wdfpOCnNSD1Zsc9lG5SWWIKhkZof3MMG");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Content----------------------------------------------------------------------------------*/
+.showCompetition {
+    padding: 80px 80px;
+    min-height: 80vh;
+}
+
+.showCompetition .text {
+    display: flex;
+    flex-direction: column;
+    padding: 86px 0px 16px 0px;
+}
+
+.showCompetition .header h1 {
+    color: rgba(15, 14, 14, 0.858);
+}
+
+/*Button Add Beasiswa*/
+.showCompetition .add {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 100%;
+    background-color: #fc724d;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.showCompetition .add:hover {
+    background-color: #d63a0f;
+}
+
+.showCompetition .header {
+    display: flex;
+    align-items: center;
+}
+
+.showCompetition .heading {
+    margin: 0;
+    margin-right: 20px;
+}
+
+.showCompetition .tableCon {
+    border-radius: 12px;
+}
+
+.showCompetition .tableCon .zero{
+    text-align: center;
+}
+
+.showCompetition .tableCon .custom {
+    margin-bottom: 35px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #fc724d;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.showCompetition .tableCon .custom thead {
+    border-radius: 12px;
+}
+
+.showCompetition .tableCon .custom thead tr {
+    border-radius: 12px;
+}
+
+.showCompetition .tableCon .custom td {
+    width: 14%;
+    padding: 10px;
+    text-align: left;
+}
+
+.showCompetition .tableCon .custom th {
+    width: 10%;
+    padding: 14px 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.showCompetition .tableCon .row {
+    border: 1px solid #fc724d;
+
+    background-color: #ffff;
+    font-size: 13px;
+    color: #333;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.showCompetition .btn.edit,
+.btn.delete {
+    font-size: 12px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.showCompetition .btn.edit {
+    border: 2px solid #c51224;
+    color: #c51224;
+}
+
+.showCompetition .btn.delete {
+    border: 2px solid #c51224;
+    background-color: #c51224;
+    color: #fff;
+}
+
+.showCompetition .btn.edit:hover {
+    background-color: #c51224;
+    color: #fff;
+}
+
+.showCompetition .btn.delete:hover {
+    background-color: #fff;
+    color: #c51224;
+}
