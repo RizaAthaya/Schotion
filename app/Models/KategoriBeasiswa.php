@@ -9,6 +9,10 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 class KategoriBeasiswa extends Model
 {
     use HasUlids;
+
+    protected $table = 'kategori_beasiswa';
+    protected $primaryKey = 'id_kategori_beasiswa';
+
     // use HasFactory;
     protected $fillable = [
         'nama',

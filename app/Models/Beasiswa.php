@@ -10,6 +10,8 @@ class Beasiswa extends Model
 {
     use HasUlids;
 
+    protected $table = 'beasiswa';
+    protected $primaryKey = 'id_beasiswa';
     protected $fillable = [
         'nama',
         'deskripsi',

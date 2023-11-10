@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BeasiswaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
 // Rute testing
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::prefix('scholarship')->group(function () {
+    Route::put('/update/{id}', [BeasiswaController::class, 'update'])->name('scholarship.update');
+    Route::get('/', [BeasiswaController::class, 'show'])->name('scholarship.show');
+    Route::get('/edit/{id}', [BeasiswaController::class, 'edit'])->name('scholarship.edit');
+    Route::get('/create', [BeasiswaController::class, 'create'])->name('scholarship.create');
+    Route::post('/store', [BeasiswaController::class, 'store'])->name('scholarship.store');
+    Route::delete('/delete/{id}', [BeasiswaController::class, 'destroy'])->name('scholarship.destroy');
+});
+
 
 // rute admin
 
