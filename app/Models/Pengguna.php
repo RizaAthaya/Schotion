@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 class Pengguna extends Model
 {
     use HasUlids;
-
+    protected $table = 'pengguna';
+    protected $primaryKey = 'id_pengguna';
     protected $fillable = [
         'nama_lengkap',
         'email',

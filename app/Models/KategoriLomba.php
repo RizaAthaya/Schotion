@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 class KategoriLomba extends Model
 {
     use HasUlids;
+    protected $table = 'kategori_lomba';
+    protected $primaryKey = 'id_kategori_lomba';
 
     protected $fillable = [
         'nama',

@@ -24,14 +24,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('/scholarInformation', [BeasiswaController::class, 'showScholar']);
-
-
-// create 
-Route::get('/scholarInformation/createScholar', [BeasiswaController::class, 'createScholar']);
-Route::post('/scholarInformation', [BeasiswaController::class, 'store']);
-
-Route::delete('/scholarInformation/{id}', [BeasiswaController::class, 'destroy']);
+Route::prefix('scholarship')->group(function () {
+    Route::get('/', [BeasiswaController::class, 'show'])->name('scholarship.show');
+    Route::get('/createScholar', [BeasiswaController::class, 'create'])->name('scholarship.create');
+    Route::post('/', [BeasiswaController::class, 'store'])->name('scholarship.store');
+    Route::delete('/{id}', [BeasiswaController::class, 'destroy'])->name('scholarship.destroy');
+});
 
 
 // rute admin
