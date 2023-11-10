@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeasiswaController;
-
+use App\Http\Controllers\LombaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// rute admin
 Route::prefix('scholarship')->group(function () {
     Route::put('/update/{id}', [BeasiswaController::class, 'update'])->name('scholarship.update');
     Route::get('/', [BeasiswaController::class, 'show'])->name('scholarship.show');
@@ -33,7 +33,13 @@ Route::prefix('scholarship')->group(function () {
     Route::delete('/delete/{id}', [BeasiswaController::class, 'destroy'])->name('scholarship.destroy');
 });
 
-
-// rute admin
+Route::prefix('competition')->group(function () {
+    Route::put('/update/{id}', [LombaController::class, 'update'])->name('competition.update');
+    Route::get('/', [LombaController::class, 'show'])->name('competition.show');
+    Route::get('/edit/{id}', [LombaController::class, 'edit'])->name('competition.edit');
+    Route::get('/create', [LombaController::class, 'create'])->name('competition.create');
+    Route::post('/store', [LombaController::class, 'store'])->name('competition.store');
+    Route::delete('/delete/{id}', [LombaController::class, 'destroy'])->name('competition.destroy');
+});
 
 // rute mahasiswa
