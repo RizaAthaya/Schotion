@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeasiswaController;
 use App\Http\Controllers\LombaController;
+use App\Http\Controllers\PenggunaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,16 @@ Route::prefix('admin')->group(function () {
         Route::put('/update/{id}', [LombaController::class, 'update'])->name('admin.competition.update');
         Route::post('/store', [LombaController::class, 'store'])->name('admin.competition.store');
         Route::delete('/delete/{id}', [LombaController::class, 'destroy'])->name('admin.competition.destroy');
+    });
+
+    // account
+    Route::prefix('account')->group(function () {
+        Route::get('/', [PenggunaController::class, 'show'])->name('admin.account.show');
+        Route::get('/edit/{id}', [PenggunaController::class, 'edit'])->name('admin.account.edit');
+        Route::get('/create', [PenggunaController::class, 'create'])->name('admin.account.create');
+        Route::put('/update/{id}', [PenggunaController::class, 'update'])->name('admin.account.update');
+        Route::post('/store', [PenggunaController::class, 'store'])->name('admin.account.store');
+        Route::delete('/delete/{id}', [PenggunaController::class, 'destroy'])->name('admin.account.destroy');
     });
 });
 

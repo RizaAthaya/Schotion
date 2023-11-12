@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             KategoriBeasiswaSeeder::class,
             KategoriLombaSeeder::class,
-            // Tambahkan seeder lainnya di sini
+            PeranSeeder::class,
         ]);
     }
 }
