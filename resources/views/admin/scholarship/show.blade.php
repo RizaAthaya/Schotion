@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/scholarship/show.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/scholarship/show.css') }}">
     <title>Daftar Beasiswa</title>
 </head>
 
@@ -16,7 +16,7 @@
         <div class="text">
             <div class="header">
                 <h1 class="heading">Scholarship Information</h1>
-                <a href="{{ url('/scholarship/create') }}" class="add">+</a>
+                <a href="{{ url('/admin/scholarship/create') }}" class="add">+</a>
             </div>
             <div class="deskripsi">
                 <p>To create, update or delete scholarship information</p>
@@ -50,9 +50,9 @@
                             <!-- Edit and Delete buttons-->
                             <td>
                                 <div class="btn-group actions">
-                                    <a href="{{ url('/scholarship/edit/' . $item->id_beasiswa) }}"
+                                    <a href="{{ url('/admin/scholarship/edit/' . $item->id_beasiswa) }}"
                                         class="btn edit">Edit</a>
-                                    <form action="{{ url('/scholarship/delete/' . $item->id_beasiswa) }}" method="post"
+                                    <form action="{{ url('/admin/scholarship/delete/' . $item->id_beasiswa) }}" method="post"
                                         style="display: inline;">
                                         @csrf
                                         @method('DELETE')

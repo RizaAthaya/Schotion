@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Form Add Scholarship Information</title>
-    <link rel="stylesheet" href="{{ asset('css/scholarship/create.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/scholarship/create.css') }}">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <p>Fill the blank to create a valid scholarship information</p>
         </div>
         <div class="form-grid">
-            <form action="/scholarship/store" method="post">
+            <form action="/admin/scholarship/store" method="post">
                 @csrf
                 <div class="container-grid">
                     <div class="left-grid">

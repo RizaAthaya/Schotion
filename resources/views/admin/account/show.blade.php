@@ -4,62 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/admin/competition/show.css') }}">
-    <title>Daftar lomba</title>
+    <link rel="stylesheet" href="{{ asset('css/admin/account/show.css') }}">
+    <title>Daftar pengguna</title>
 </head>
 
 <body>
     @include('navbar')
 
     <!-- Content --------------------------------------------------------------------------------------->
-    <div class="showCompetition">
+    <div class="showAccount">
         <div class="text">
             <div class="header">
-                <h1 class="heading">Competition Information</h1>
-                <a href="{{ url('/admin/competition/create') }}" class="add">+</a>
+                <h1 class="heading">Account Information</h1>
+                <a href="{{ url('/admin/account/create') }}" class="add">+</a>
             </div>
             <div class="deskripsi">
-                <p>To create, update or delete competition information</p>
+                <p>To create, update or delete account information</p>
             </div>
         </div>
 
         <div class="tableCon">
-            @if (count($lomba) > 0)
+            @if (count($pengguna) > 0)
 
                 <table class="custom">
                     <!-- headers tabel -->
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Start date</th>
-                            <th>End Date</th>
-                            <th>Providers</th>
-                            <th>Image link</th>
-                            <th>Category</th>
+                            <th>ID</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- data -->
-                        @foreach ($lomba as $item)
+                        @foreach ($pengguna as $item)
                             <tr class="row">
-                                <td>{{ $item->nama }}</td>
-                                <td>{{ $item->tanggal_mulai }}</td>
-                                <td>{{ $item->tanggal_berakhir }}</td>
-                                <td>{{ $item->penyelenggara }}</td>
-                                <td>{{ $item->link_gambar }}</td>
-                                <td>{{ $item->kategori }}</td>
+                                <td>{{ $item->id_pengguna }}</td>
+                                <td>{{ $item->nama_lengkap }}</td>
+                                <td>{{ $item->email }}</td>
+                                <td>{{ $item->role }}</td>
                                 <!-- Edit and Delete buttons-->
                                 <td>
                                     <div class="btn-group actions">
-                                        <a href="{{ url('/admin/competition/edit/' . $item->id_lomba) }}"
+                                        <a href="{{ url('/admin/account/edit/' . $item->id_pengguna) }}"
                                             class="btn edit">Edit</a>
-                                        <form action="{{ url('/admin/competition/delete/' . $item->id_lomba) }}"
+                                        <form action="{{ url('/admin/account/delete/' . $item->id_pengguna) }}"
                                             method="post" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn delete"
-                                                onclick="return confirm('Apakah Anda yakin ingin menghapus lomba ini?')">Delete</button>
+                                                onclick="return confirm('Apakah Anda yakin ingin menghapus pengguna ini?')">Delete</button>
                                         </form>
                                     </div>
                                 </td>
