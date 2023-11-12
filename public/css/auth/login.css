@@ -1,0 +1,93 @@
+.loginPage{
+    padding: 80px 80px 0px 80px;
+    min-height: 60vh;
+    display: flex;
+}
+
+.leftSection{
+    width: 50%;
+}
+
+.leftSection img{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.rightSection{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+}
+
+.rightSection .text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rightSection .text .title{
+    color: rgba(35, 50, 85, 0.75); 
+    font-size: 32px; 
+    font-weight: 700; 
+    letter-spacing: 1.60px; 
+    word-wrap: break-word;
+    margin: 0;
+}
+
+.rightSection .text h5{
+    color: rgba(35, 50, 85, 0.70); 
+    font-size: 14px; 
+    font-weight: 400; 
+    word-wrap: break-word;
+    margin: 0;
+}
+
+.rightSection .loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.loginPage .form-group {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+}
+
+.loginPage .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.loginPage .form-group input,
+.form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #969393;
+}
+
+.loginPage .loginForm .button-container {
+    text-align: center;
+    margin-top: 9px;
+}
+
+.loginPage .loginForm .button-container button{
+    background: linear-gradient(to right, #6e7b8b, #cd9d45, #6e7b8b);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    float: right;
+}
