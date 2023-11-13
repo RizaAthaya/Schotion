@@ -26,7 +26,7 @@ Route::get('/', function () {
 });
 
 // admin
-Route::prefix('admin')->group(function () {
+Route::middleware(['auth', 'checkrole:admin'])->prefix('admin')->group(function () {
     // scholarships
     Route::prefix('scholarship')->group(function () {
         Route::get('/', [BeasiswaController::class, 'show'])->name('admin.scholarship.show');
@@ -56,16 +56,21 @@ Route::prefix('admin')->group(function () {
         Route::post('/store', [PenggunaController::class, 'store'])->name('admin.account.store');
         Route::delete('/delete/{id}', [PenggunaController::class, 'destroy'])->name('admin.account.destroy');
     });
-});
+})->middleware('checkrole');;
 
 
 // rute mahasiswa
 Route::prefix('auth')->group(function () {
     // Rute-rute untuk otentikasi
-    Route::get('/login', [AuthController::class, 'showLogin'])->name('auth.login');
-    Route::post('/login', [AuthController::class, 'login']);
-    Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+    Route::middleware('guest')->group(function () {
+        Route::get('/login', [AuthController::class, 'showLogin'])->name('auth.login');
+        Route::post('/login', [AuthController::class, 'login']);
+        Route::get('/register', [AuthController::class, 'showRegister'])->name('auth.register');
+        Route::post('/register', [AuthController::class, 'register']);
+    });
 
-    Route::get('/register', [AuthController::class, 'showRegister'])->name('auth.register');
-    Route::post('/register', [AuthController::class, 'register']);
+    // Rute untuk logout hanya bisa diakses oleh pengguna yang sudah login
+    Route::middleware('auth')->group(function () {
+        Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+    });
 });
