@@ -30,10 +30,11 @@ class AuthController extends Controller
                 $user = auth()->user();
                 Session::put('user', $user);
                 return redirect()->intended('/');
+            } else {
+                return back()->withErrors(['email' => 'Authentication failed.'])->with('error_message', "Email or password is incorrect");
             }
-
         } catch (\Exception $e) {
-            return back()->withErrors(['email' => $e->getMessage()]);
+            return back()->withErrors(['email' => $e->getMessage()])->with('error_message', $e->getMessage());
         }
     }
 
@@ -42,14 +43,18 @@ class AuthController extends Controller
     public function logout()
     {
         try {
+            // dd(Auth::user()->peran->nama); // Tambahkan ini untuk mengecek role pengguna
+
             Auth::logout();
-            return redirect('/');
+            Session::flush();
+            return redirect('/auth/login');
         } catch (\Exception $e) {
+            dd($e->getMessage());
             return back()->withErrors(['error' => $e->getMessage()]);
         }
     }
 
-    public function showRegistration()
+    public function showRegister()
     {
         return view('auth.register');
     }
@@ -75,10 +80,8 @@ class AuthController extends Controller
 
             return redirect()->route('auth.login')->with('success', 'Registrasi berhasil! Silakan login.');
         } catch (\Exception $e) {
+            dd($e->getMessage());
             return back()->withErrors(['error' => $e->getMessage()]);
         }
     }
-
-
-
 }

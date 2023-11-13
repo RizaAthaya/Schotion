@@ -46,9 +46,36 @@ nav ul {
     color: rgba(115, 115, 115, 1);
 }
 
-nav ul li {
-    cursor: pointer;
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
 }
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fc724d;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    visibility: visible;
+    background-color: #fc724d;
+}
+
 
 nav .buttons {
     display: flex;
@@ -66,6 +93,24 @@ nav .buttons .login {
     padding: 0px 15px;
     width: 60px;
     text-align: center;
+}
+
+nav .buttons .logout {
+    background-color: transparent;
+    color: #fc724d;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0.2px;
+    word-wrap: break-word;
+    border: none;
+}
+
+nav .buttons .logout:hover {
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.2px;
 }
 
 nav .buttons .login:hover {
@@ -132,7 +177,7 @@ nav .mobile-menu {
     z-index: 1000;
 }
 
-nav .mobile-list{
+nav .mobile-list {
     display: none;
 }
 
@@ -179,7 +224,8 @@ nav .mobile-menu.show {
     nav .mobile-menu.show {
         display: block;
     }
-    nav .mobile-list{
+
+    nav .mobile-list {
         padding: 10px;
         margin: 0px;
         display: block;

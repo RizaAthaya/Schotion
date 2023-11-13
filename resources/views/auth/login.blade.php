@@ -23,6 +23,9 @@
             </div>
             <form class="loginForm" action="{{ route('auth.login') }}" method="post">
                 @csrf
+                @if (session('error_message'))
+                    <div class="errorAuth">{{ session('error_message') }}</div>
+                @endif
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required placeholder="Email">
@@ -39,6 +42,7 @@
     </div>
 
     @include('footer')
+
 </body>
 
 </html>
