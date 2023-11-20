@@ -5,16 +5,20 @@
         <a href="/">
             <h3 class="logo">Schotion</h3>
         </a>
-        @if (auth()->check())
-            @if (auth()->user()->role === 'admin')
+        @if (Auth::user())
+            {{-- <?php dd(Auth::user()); ?> --}}
+            @if (Session::get('user')->peran->nama === 'admin')
                 <ul class="list">
                     <li><a href="/admin/scholarship">Scholarship</a></li>
                     <li><a href="/admin/competition">Competition</a></li>
                     <li><a href="/admin/account">Account</a></li>
                 </ul>
                 <div class="buttons">
-                    <a href="" class="login">Logout</a>
-                    <a class="register">
+                    <form id="logout-form" action="{{ route('auth.logout') }}" method="POST" class="login">
+                        @csrf
+                        <button class="logout"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</button>
+                    </form> <a class="register">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 class="person">
@@ -23,7 +27,7 @@
                                     clipRule="evenodd" />
                             </svg>
                             <h3>
-                                {{ auth()->user()->name }}
+                                {{ Session::get('user')->nama_lengkap }}
                             </h3>
                         </button>
                     </a>
@@ -41,14 +45,18 @@
                         </ul>
                     </div>
                 </div>
-            @elseif (auth()->user()->role === 'mahasiswa')
+            @elseif (Session::get('user')->peran->nama === 'mahasiswa')
                 <ul class="list">
                     <li><a href="/">Home</a></li>
                     <li><a href="/scholarship">Scholarship</a></li>
                     <li><a href="/competition">Competition</a></li>
                 </ul>
                 <div class="buttons">
-                    <a href="{{ route('mahasiswa-logout') }}" class="login">Logout</a>
+                    <form id="logout-form" action="{{ route('auth.logout') }}" method="POST" class="login">
+                        @csrf
+                        <button class="logout"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</button>
+                    </form>
                     <a class="register">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -58,7 +66,7 @@
                                     clipRule="evenodd" />
                             </svg>
                             <h3>
-                                {{ auth()->user()->name }}
+                                {{ Session::get('user')->nama_lengkap }}
                             </h3>
                         </button>
                     </a>
@@ -78,8 +86,8 @@
             @endif
         @else
             <div class="buttons">
-                <a class="login">Login</a>
-                <a class="register">
+                <a class="login" href="/auth/login">Login</a>
+                <a class="register" href="/auth/register">
                     <button>
                         <h3>Join Us</h3> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             strokeWidth={2} stroke="currentColor" class="arrow">
@@ -101,6 +109,8 @@
                 </div>
             </div>
         @endif
+
+
     </div>
 </nav>
 
