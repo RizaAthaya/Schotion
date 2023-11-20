@@ -72,5 +72,6 @@ Route::prefix('auth')->group(function () {
     // Rute untuk logout hanya bisa diakses oleh pengguna yang sudah login
     Route::middleware('auth')->group(function () {
         Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+        // Route::match(['get', 'post'], '/logout', [AuthController::class, 'logout'])->name('auth.logout');
     });
 });

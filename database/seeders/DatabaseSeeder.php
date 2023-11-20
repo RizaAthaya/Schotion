@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
             KategoriBeasiswaSeeder::class,
             KategoriLombaSeeder::class,
             PeranSeeder::class,
+            BeasiswaSeeder::class,
+            LombaSeeder::class,
+            PenggunaAdminSeeder::class
         ]);
     }
 }
