@@ -137,7 +137,7 @@ body {
 
 @media screen and (max-width: 900px) {
     .showCompetition {
-        padding: 20px;
+        padding: 25px;
     }
 
     .showCompetition .header h1 {

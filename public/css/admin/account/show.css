@@ -136,7 +136,7 @@ body {
 
 @media screen and (max-width: 900px) {
     .showAccount {
-        padding: 20px;
+        padding: 25px;
     }
 
     .showAccount .header h1 {
