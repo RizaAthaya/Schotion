@@ -25,4 +25,8 @@ class Beasiswa extends Model
     public function kategori()
     {
         return $this->belongsTo(KategoriBeasiswa::class, 'id_kategori_beasiswa');
-    }}
+    }
+
+
+}
+

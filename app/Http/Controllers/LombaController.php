@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class LombaController extends Controller
 {
-    /*====================== View ======================*/
+    /*====================== View Admin ======================*/
 
     public function show()
     {
@@ -59,6 +59,41 @@ class LombaController extends Controller
 
         return view('admin.competition.edit', $data);
     }
+
+    /*====================== View Mahasiswa ======================*/
+
+
+    public function showCompetition()
+    {
+        $dataCompetition = Lomba::with('kategori')->get();
+        $categories = KategoriLomba::all(); // Mengambil semua kategori lomba
+
+        return view('competition', ['competition' => $dataCompetition, 'categories' => $categories]);
+    }
+
+    public function searchCompetition(Request $request)
+    {
+        try {
+            // Ambil data dari input pencarian
+            $searchTerm = $request->input('search');
+
+            // Lakukan operasi pencarian sesuai kebutuhan Anda
+            // Contoh: Ambil data dari database dengan menggunakan $searchTerm
+            $searchResults = Lomba::where('nama', 'like', '%' . $searchTerm . '%')
+                ->get();
+
+            $dataCompetition = [
+                'competition' => $searchResults
+            ];
+
+            // Kembalikan hasil pencarian ke tampilan competition
+            return view('competition', $dataCompetition);
+        } catch (\Throwable $th) {
+            // Tangani kesalahan jika terjadi
+            return response()->json(['error' => $th->getMessage()], 500);
+        }
+    }
+
 
 
     /*====================== Database ======================*/

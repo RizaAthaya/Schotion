@@ -17,8 +17,8 @@ class BeasiswaController extends Controller
     {
         try {
             $response = Beasiswa::join('kategori_beasiswa', 'beasiswa.id_kategori_beasiswa', '=', 'kategori_beasiswa.id_kategori_beasiswa')
-            ->select('beasiswa.*', 'kategori_beasiswa.nama as kategori')
-            ->get();
+                ->select('beasiswa.*', 'kategori_beasiswa.nama as kategori')
+                ->get();
         } catch (\Throwable $th) {
             $response = $th->getMessage();
         }
@@ -62,7 +62,54 @@ class BeasiswaController extends Controller
 
         return view('admin.scholarship.edit', $data);
     }
+    // ======================== view mahasiswa =================
+    public function showScholarship()
+    {
+        $dataScholar = Beasiswa::with('kategori')->get();
+        $categories = KategoriBeasiswa::all();
 
+        return view('scholarship.index', ['scholarship' => $dataScholar, 'categories' => $categories]);
+    }
+
+    public function searchScholarship(Request $request)
+    {
+        try {
+            // Ambil data dari input pencarian
+            $searchTerm = $request->input('search');
+
+            // Lakukan operasi pencarian sesuai kebutuhan Anda
+            // Contoh: Ambil data dari database dengan menggunakan $searchTerm
+            $searchResults = Beasiswa::where('nama', 'like', '%' . $searchTerm . '%')
+                ->get();
+
+            $dataScholar = [
+                'scholarship' => $searchResults
+            ];
+
+            // Kembalikan hasil pencarian ke tampilan competition
+            return view('scholarship.index', $dataScholar);
+        } catch (\Throwable $th) {
+            // Tangani kesalahan jika terjadi
+            return response()->json(['error' => $th->getMessage()], 500);
+        }
+    }
+
+    public function showDetail($id)
+    {
+        try {
+            // Logika untuk mendapatkan data beasiswa berdasarkan ID
+            $scholarship = Beasiswa::findOrFail($id);
+
+            $data = [
+                'scholarship' => $scholarship,
+            ];
+
+            return view('scholarship.detail', $data);
+        } catch (\Throwable $th) {
+            // Tangani kesalahan jika terjadi, misalnya redirect atau tampilkan pesan kesalahan
+            return redirect('/scholarship')->with('error', 'Gagal menampilkan detail beasiswa.');
+        }
+    }
 
     /*====================== Database ======================*/
 
