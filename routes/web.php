@@ -6,6 +6,7 @@ use App\Http\Controllers\BeasiswaController;
 use App\Http\Controllers\LombaController;
 use App\Http\Controllers\PenggunaController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +27,9 @@ Route::get('/', function () {
 });
 
 // admin
-Route::middleware(['auth', 'checkrole:admin'])->prefix('admin')->group(function () {
+// Route::middleware(['auth', 'checkrole:admin'])->prefix('admin')->group(function () {
+    Route::prefix('admin')->group(function () {
+
     // scholarships
     Route::prefix('scholarship')->group(function () {
         Route::get('/', [BeasiswaController::class, 'show'])->name('admin.scholarship.show');
@@ -56,7 +59,8 @@ Route::middleware(['auth', 'checkrole:admin'])->prefix('admin')->group(function 
         Route::post('/store', [PenggunaController::class, 'store'])->name('admin.account.store');
         Route::delete('/delete/{id}', [PenggunaController::class, 'destroy'])->name('admin.account.destroy');
     });
-})->middleware('checkrole');;
+});
+// })->middleware('checkrole');;
 
 
 // rute mahasiswa
@@ -75,3 +79,17 @@ Route::prefix('auth')->group(function () {
         // Route::match(['get', 'post'], '/logout', [AuthController::class, 'logout'])->name('auth.logout');
     });
 });
+
+
+
+
+Route::get('/competition', [LombaController::class, 'showCompetition']);
+Route::post('/competition/search', [LombaController::class, 'searchCompetition'])->name('search.competition');
+
+
+Route::get('/scholarship', [BeasiswaController::class, 'showScholarship']);
+Route::post('/scholarship/search', [BeasiswaController::class, 'searchScholarship'])->name('search.scholarship');
+
+Route::get('/scholarship/detail/{id}', [BeasiswaController::class, 'showDetail'])->name('scholarship.detail');
+
+

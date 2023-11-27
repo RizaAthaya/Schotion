@@ -25,4 +25,7 @@ class Lomba extends Model
     {
         return $this->belongsTo(KategoriLomba::class, 'id_kategori_lomba');
     }
+    
+
+
 }

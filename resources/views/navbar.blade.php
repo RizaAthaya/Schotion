@@ -6,7 +6,6 @@
             <h3 class="logo">Schotion</h3>
         </a>
         @if (Auth::user())
-            {{-- <?php dd(Auth::user()); ?> --}}
             @if (Session::get('user')->peran->nama === 'admin')
                 <ul class="list">
                     <li><a href="/admin/scholarship">Scholarship</a></li>

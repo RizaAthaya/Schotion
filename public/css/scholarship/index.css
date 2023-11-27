@@ -1,0 +1,198 @@
+.scholarship {
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.scholarship .search-container {
+    width: 100%;
+    position: flex;
+    height: 400px;
+    z-index: 2;
+}
+
+.scholarship .search-container h1 {
+    text-align: left;
+    color: #ffffff;
+    z-index: 3;
+    position: absolute;
+    top: 180px;
+    left: 80px;
+    color: white;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.scholarship .search-container p{
+    z-index: 3;
+    position: absolute;
+    top: 260px;
+    left: 80px;
+    color: #fff;
+    font-size: large;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    
+}
+
+.scholarship .search-container .search-bar {
+    position: absolute;
+    top: 45%;
+    transform: translate(-70%, -50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 63%;
+    width: 50%;
+    padding: 20px;
+    gap: 12px;
+}
+
+
+.scholarship .search-container .header-image {
+    z-index: 1;
+    display: block;
+    background-color: #fc724d;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    height: 400px;
+}
+
+.scholarship .search-container .header-image img {
+    width: 100%;
+    height: 400px;
+    opacity: 40%;
+    object-fit: cover;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    
+}
+
+.scholarship .menu {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.scholarship .menu .tombol {
+    border: none;
+    border-radius: 10px;
+    width: 135px;
+    height: 40px;
+    position: relative;
+    left: 80px;
+    top: 50px;
+    background: #fc724d;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.scholarship .menu .tombol:hover {
+    background-color: #ffffff;
+    color: #fc724d;
+    border: 2px solid #fc724d;
+}
+
+/* Gaya saat tombol ditekan (active) */
+.scholarship .menu .tombol:active {
+    background-color: #f5672a;
+    /* Warna latar belakang yang sama seperti saat hover */
+}
+
+/* Gaya saat tombol ditekan dan hover bersamaan */
+.scholarship .menu .tombol:hover:active {
+    background-color: #f5672a;
+    /* Warna latar belakang yang sama seperti saat hover dan ditekan */
+}
+
+.scholarship .all-categories{
+    padding: 24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 50px;
+    margin-left: 80px;
+}
+
+.scholarship .konten {
+    box-sizing: border-box;
+    position: relative;
+    inset: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+
+.scholarship .tampilan-card {
+    background: rgba(244, 244, 244, 0.5);
+    border-radius: 30px;
+    width: 265px;
+    height: 321px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding: 28px;
+    width: 265px;
+    height: 330px;
+    /* Mengatur lebar card (25% dari lebar konten - margin) */
+    margin: 10px;
+    /* Memberikan margin antar card */
+    box-sizing: border-box;
+
+}
+
+.scholarship .tampilan-card .gambar img{
+    background: #d9d9d9;
+    border-radius: 20px;
+    width: 208px;
+    height: 135px;
+
+}
+
+.scholarship .tampilan-card .judul {
+    color: #000000;
+    text-align: center;
+    font: 700 18px "Roboto-Bold", sans-serif;
+    margin-top: 10px;
+
+}
+
+.scholarship .tampilan-card .isi-konten {
+    color: #000000;
+    text-align: left;
+    font: 400 14px "Roboto-Regular", sans-serif;
+    width: 234px;
+    height: 50px; 
+    margin-top: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+
+
+.scholarship .tampilan-card .tombol {
+    display: inline-block;
+    text-align: center;
+    line-height: 28px;
+    border: none;
+    border-radius: 10px;
+    width: 112px;
+    height: 32px;
+    position: relative;
+    background: #fc724d;
+    cursor: pointer;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 48px;
+}
+
+.scholarship .spasing {
+    height: 80px;
+}
