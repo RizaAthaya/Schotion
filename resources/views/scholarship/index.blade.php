@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/scholarship/index.css">
+    <link rel="stylesheet" href="{{ asset('css/scholarship/index.css') }}">
+
     <title>scholarship</title>
 </head>
 
@@ -45,7 +46,7 @@
                     <div class="isi-konten">
                         {{ $item->deskripsi }}
                     </div>
-                    <a href="{{ url('/scholarship/detail/' . $item->id) }}" class="tombol">More</a>
+                    <a href="{{ url('/scholarship/detail/' . $item->id_beasiswa) }}" class="tombol">More</a>
                     
                 </div>
                 @endif

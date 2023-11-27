@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/competition.css">
+    <link rel="stylesheet" href="{{ asset('css/competition/index.css') }}">
     <title>competition</title>
 </head>
 
@@ -45,7 +45,7 @@
                     <div class="isi-konten">
                         {{ $item->deskripsi }}
                     </div>
-                    <button class="tombol">More</button>
+                    <a href="{{ url('/competition/detail/' . $item->id_lomba) }}" class="tombol">More</a>
                 </div>
                 @endif
                 @endforeach

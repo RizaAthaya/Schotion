@@ -37,19 +37,20 @@ class BeasiswaSeeder extends Seeder
 
         Beasiswa::create([
             'nama' => 'Beasiswa BCA',
-            'deskripsi' => 'Beasiswa Bakti BCA untuk Future-Ready Generation </br>
+            'deskripsi' => 'Beasiswa Bakti BCA untuk Future-Ready Generation 
 
             “Senantiasa di sisi Anda” merupakan komitmen BCA yang bukan hanya ditujukan bagi nasabah, namun juga bagi seluruh stakeholders. Sejak 1999, BCA berkontribusi bagi pemberdayaan masyarakat dan pembangunan berkelanjutan di bidang pendidikan melalui pemberian Beasiswa Bakti BCA. Beasiswa ini diperuntukkan bagi #GenerasiPastiBisa Indonesia yang memiliki semangat untuk membangun negeri dan menjadi pemimpin bangsa di masa depan. 
-            </br>
+            
             Selaras dengan salah satu value BCA, yaitu continuous pursuit of excellence, kami membuka kesempatan bagi mahasiswa/i Indonesia berprestasi, baik di bidang akademis, maupun non-akademis, yang memiliki semangat untuk terus mengasah kemampuan dan kompetensi diri untuk mempersiapkan diri menjadi generasi penerus bangsa di bidang apapun yang diminati dan ditekuni. Setiap tahunnya, BCA memberikan bantuan berupa dana pendidikan dan program pengembangan bagi mahasiswa/i dari berbagai perguruan tinggi di Indonesia untuk mencapai impian.
-            </br>
-            Apakah kamu future-ready generation yang kami cari? Pendaftaran program Beasiswa Bakti BCA 2024 sudah dibuka dengan periode pendaftaran 10-23 Oktober 2023.   ',
+            
+            Apakah kamu future-ready generation yang kami cari? Pendaftaran program Beasiswa Bakti BCA 2024 sudah dibuka bulan Oktober 2023.   ',
             'tanggal_mulai' => now(),
             'tanggal_berakhir' => now()->addDays(30),
             'penyelenggara' => 'BCA',
-            'link_gambar' => 'https://th.bing.com/th/id/OIP.XSqYhxgZ93MnmBB8BbkpYwHaE8?w=288&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+            'link_gambar' => 'https://th.bing.com/th/id/OIP.fxuk_j5pV84R-xa8t9dCMgHaHX?w=208&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7',
             'id_kategori_beasiswa' => $kategoriIDs[2 % count($kategoriIDs)],
         ]);
+        
         // Beasiswa 2 - Local
         Beasiswa::create([
             'nama' => 'Beasiswa Unggulan',

@@ -28,7 +28,7 @@ Route::get('/', function () {
 
 // admin
 // Route::middleware(['auth', 'checkrole:admin'])->prefix('admin')->group(function () {
-    Route::prefix('admin')->group(function () {
+Route::prefix('admin')->group(function () {
 
     // scholarships
     Route::prefix('scholarship')->group(function () {
@@ -83,13 +83,27 @@ Route::prefix('auth')->group(function () {
 
 
 
-Route::get('/competition', [LombaController::class, 'showCompetition']);
-Route::post('/competition/search', [LombaController::class, 'searchCompetition'])->name('search.competition');
 
+//rute competition
+Route::prefix('competition')->group(function () {
+    Route::get('/', [LombaController::class, 'showCompetition']);
+    Route::post('/search', [LombaController::class, 'searchCompetition'])->name('search.competition');
 
-Route::get('/scholarship', [BeasiswaController::class, 'showScholarship']);
-Route::post('/scholarship/search', [BeasiswaController::class, 'searchScholarship'])->name('search.scholarship');
+    // Uncomment the line below if you want to pass an ID to the showDetail method
+    Route::get('/detail/{id}', [LombaController::class, 'showDetail'])->name('competition.detail');
 
-Route::get('/scholarship/detail/{id}', [BeasiswaController::class, 'showDetail'])->name('scholarship.detail');
+    // // If you want to show the detail without passing an ID
+    // Route::get('/detail', [BeasiswaController::class, 'showDetail'])->name('scholarship.detail');
+});
 
+//rute scholarship
+Route::prefix('scholarship')->group(function () {
+    Route::get('/', [BeasiswaController::class, 'showScholarship']);
+    Route::post('/search', [BeasiswaController::class, 'searchScholarship'])->name('search.scholarship');
 
+    // Uncomment the line below if you want to pass an ID to the showDetail method
+    Route::get('/detail/{id}', [BeasiswaController::class, 'showDetail'])->name('scholarship.detail');
+
+    // // If you want to show the detail without passing an ID
+    // Route::get('/detail', [BeasiswaController::class, 'showDetail'])->name('scholarship.detail');
+});
