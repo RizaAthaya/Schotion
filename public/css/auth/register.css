@@ -1,20 +1,20 @@
-.registerPage{
+.registerPage {
     padding: 80px 80px 0px 80px;
     min-height: 80vh;
     display: flex;
 }
 
-.leftSection{
+.leftSection {
     width: 50%;
     display: flex;
     align-items: flex-end;
 }
 
-.leftSection img{
+.leftSection img {
     width: 95%;
 }
 
-.rightSection{
+.rightSection {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -22,31 +22,30 @@
     justify-content: center;
 }
 
-.rightSection .text{
+.rightSection .text {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.rightSection .text .title{
-    color: rgba(35, 50, 85, 0.75); 
-    font-size: 32px; 
-    font-weight: 700; 
-    letter-spacing: 1.60px; 
+.rightSection .text .title {
+    color: rgba(35, 50, 85, 0.75);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.60px;
     word-wrap: break-word;
     margin: 0;
 }
 
-.rightSection .text h5{
-    color: rgba(35, 50, 85, 0.70); 
-    font-size: 14px; 
-    font-weight: 400; 
+.rightSection .text h5 {
+    color: rgba(35, 50, 85, 0.70);
+    font-size: 14px;
+    font-weight: 400;
     word-wrap: break-word;
     margin: 0;
 }
 
-.rightSection .registerForm
-{
+.rightSection .registerForm {
     display: flex;
     padding-bottom: 12px;
     flex-direction: column;
@@ -65,8 +64,10 @@
     font-weight: bold;
     font-size: 15px;
 }
+
 .registerPage .form-group input,
-.form-group textarea, .form-group select {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -74,14 +75,12 @@
     border: 1px solid #969393;
 }
 
-.registerPage .registerForm
- .button-container {
+.registerPage .registerForm .button-container {
     text-align: center;
     margin-top: 9px;
 }
 
-.registerPage .registerForm
- .button-container button{
+.registerPage .registerForm .button-container button {
     background: linear-gradient(to right, #6e7b8b, #cd9d45, #6e7b8b);
     color: white;
     border: none;
@@ -94,4 +93,17 @@
     cursor: pointer;
     border-radius: 20px;
     float: right;
+}
+
+@media screen and (max-width: 900px) {
+    .registerPage {
+        padding: 80px 25px;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .leftSection, .rightSection {
+        width: 100%;
+    }
 }
