@@ -33,6 +33,7 @@ body {
     font-size: 28px;
     text-decoration: none;
     margin-right: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .showCompetition .add:hover {
@@ -53,7 +54,7 @@ body {
     border-radius: 12px;
 }
 
-.showCompetition .tableCon .zero{
+.showCompetition .tableCon .zero {
     text-align: center;
 }
 
@@ -131,4 +132,27 @@ body {
 .showCompetition .btn.delete:hover {
     background-color: #fff;
     color: #c51224;
+}
+
+
+@media screen and (max-width: 900px) {
+    .showCompetition {
+        padding: 25px;
+    }
+
+    .showCompetition .header h1 {
+        font-size: 22px;
+    }
+
+    .showCompetition .tableCon .custom,
+    .showCompetition .tableCon {
+        overflow-x: auto;
+        width: calc(100vw-40px);
+    }
+
+    .showCompetition .add {
+        font-size: 20px;
+        padding: 8px 15px;
+
+    }
 }

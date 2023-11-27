@@ -45,7 +45,7 @@ class AuthController extends Controller
         try {
             Session::flush();
             Auth::logout();
-            // return redirect('/auth/login');
+            return redirect('/auth/login');
         } catch (\Exception $e) {
             dd($e->getMessage());
             return back()->withErrors(['error' => $e->getMessage()]);
