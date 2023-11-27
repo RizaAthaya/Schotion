@@ -33,6 +33,7 @@ body {
     font-size: 28px;
     text-decoration: none;
     margin-right: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .showScholar .add:hover {
@@ -76,6 +77,7 @@ body {
     padding: 10px;
     text-align: left;
 }
+
 .showScholar .tableCon .custom th {
     width: 10%;
     padding: 14px 10px;
@@ -85,7 +87,6 @@ body {
 
 .showScholar .tableCon .row {
     border: 1px solid #fc724d;
-
     background-color: #ffff;
     font-size: 13px;
     color: #333;
@@ -126,4 +127,26 @@ body {
 .showScholar .btn.delete:hover {
     background-color: #fff;
     color: #c51224;
+}
+
+@media screen and (max-width: 900px) {
+    .showScholar {
+        padding: 25px;
+    }
+
+    .showScholar .header h1 {
+        font-size: 22px;
+    }
+
+    .showScholar .tableCon .custom,
+    .showScholar .tableCon {
+        overflow-x: auto;
+        width: calc(100vw-40px);
+    }
+
+    .showScholar .add {
+        font-size: 20px;
+        padding: 8px 15px;
+
+    }
 }

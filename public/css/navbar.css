@@ -231,4 +231,18 @@ nav .mobile-menu.show {
         margin: 0px;
         display: block;
     }
+
+    nav .buttons .logout {
+        padding: 0px 10px;
+        background-color: #fc724d;
+        border: transparent;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+        gap: 8px;
+        color: white;
+        width: 100%;
+        font-size: 16px;
+    }
 }

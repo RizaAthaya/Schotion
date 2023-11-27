@@ -53,7 +53,7 @@ body {
     border-radius: 12px;
 }
 
-.showAccount .tableCon .zero{
+.showAccount .tableCon .zero {
     text-align: center;
 }
 
@@ -131,4 +131,27 @@ body {
 .showAccount .btn.delete:hover {
     background-color: #fff;
     color: #c51224;
+}
+
+
+@media screen and (max-width: 900px) {
+    .showAccount {
+        padding: 25px;
+    }
+
+    .showAccount .header h1 {
+        font-size: 22px;
+    }
+
+    .showAccount .tableCon .custom,
+    .showAccount .tableCon {
+        overflow-x: auto;
+        width: calc(100vw-40px);
+    }
+
+    .showAccount .add {
+        font-size: 20px;
+        padding: 8px 15px;
+
+    }
 }

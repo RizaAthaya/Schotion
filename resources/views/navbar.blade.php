@@ -37,10 +37,16 @@
                     </svg>
                     <div class="mobile-menu" id="mobileMenu">
                         <ul class="mobile-list">
-                            <li><a href="/">Home</a></li>
                             <li><a href="/admin/scholarship">Scholarship</a></li>
                             <li><a href="/admin/competition">Competition</a></li>
                             <li><a href="/admin/account">Account</a></li>
+                            <li>
+                                <form id="logout-form" action="{{ route('auth.logout') }}" method="POST">
+                                    @csrf
+                                    <button class="logout"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -79,6 +85,13 @@
                             <li><a href="/">Home</a></li>
                             <li><a href="/scholarship">Scholarship</a></li>
                             <li><a href="/competition">Competition</a></li>
+                            <li>
+                                <form id="logout-form" action="{{ route('auth.logout') }}" method="POST">
+                                    @csrf
+                                    <button class="logout"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>
