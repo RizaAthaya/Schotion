@@ -11,7 +11,7 @@
 <body>
     @include('navbar')
 
-    <div class="detailScholar">
+    <div class="detailCompe">
         <div class="header-gambar">
             <img src="{{ $competition->link_gambar }}" alt="Gambar {{ $competition->nama }}">
         </div>

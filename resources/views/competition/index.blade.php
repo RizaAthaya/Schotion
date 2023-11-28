@@ -32,9 +32,10 @@
             @endforeach
         </div>
 
+        
         <div class="all-categories">
             @foreach ($categories as $category)
-            <div id="{{ strtolower($category->nama) }}-content" class="konten tambahan" >
+            <div id="{{ strtolower($category->nama) }}-content" class="konten">
                 @foreach ($competition as $item)
                 @if ($category->nama == 'all' || $item->kategori->nama == $category->nama)
                 <div class="tampilan-card">
@@ -46,6 +47,7 @@
                         {{ $item->deskripsi }}
                     </div>
                     <a href="{{ url('/competition/detail/' . $item->id_lomba) }}" class="tombol">More</a>
+
                 </div>
                 @endif
                 @endforeach
@@ -53,6 +55,8 @@
             @endforeach
 
         </div>
+        
+
 
 
 
@@ -73,7 +77,10 @@
                     hideAllContent();
 
                     // Tampilkan konten sesuai dengan kategori yang dipilih
-                    document.getElementById(category.toLowerCase() + '-content').style.display = 'flex';
+                    var selectedContent = document.getElementById(category.toLowerCase() + '-content');
+                    if (selectedContent) {
+                        selectedContent.style.display = 'flex';
+                    }
                 }
             }
 
@@ -85,6 +92,8 @@
                 }
             }
         </script>
+
+
 
 
 

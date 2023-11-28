@@ -1,10 +1,11 @@
 .competition {
     padding-top: 80px;
     min-height: 100vh;
+
 }
 
 .competition .search-container {
-    width: 100%;
+    width: 1;
     position: flex;
     height: 400px;
     z-index: 2;
@@ -22,7 +23,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.competition .search-container p{
+.competition .search-container p {
     z-index: 3;
     position: absolute;
     top: 260px;
@@ -31,23 +32,8 @@
     font-size: large;
     font-weight: 500;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    
-}
 
-.competition .search-container .search-bar {
-    position: absolute;
-    top: 45%;
-    transform: translate(-70%, -50%);
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 63%;
-    width: 50%;
-    padding: 20px;
-    gap: 12px;
 }
-
 
 .competition .search-container .header-image {
     z-index: 1;
@@ -65,7 +51,7 @@
     object-fit: cover;
     border-bottom-left-radius: 15%;
     border-bottom-right-radius: 15%;
-    
+
 }
 
 .competition .menu {
@@ -81,7 +67,7 @@
     height: 40px;
     position: relative;
     left: 80px;
-    top: 50px;
+    margin-top: 50px;
     background: #fc724d;
     cursor: pointer;
     color: #ffffff;
@@ -98,23 +84,24 @@
 
 /* Gaya saat tombol ditekan (active) */
 .competition .menu .tombol:active {
-    background-color: #f5672a;
+    background-color: white;
     /* Warna latar belakang yang sama seperti saat hover */
 }
 
 /* Gaya saat tombol ditekan dan hover bersamaan */
 .competition .menu .tombol:hover:active {
-    background-color: #f5672a;
+    background-color: white;
     /* Warna latar belakang yang sama seperti saat hover dan ditekan */
 }
 
-.competition .all-categories{
+.competition .all-categories {
     padding: 24px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     gap: 50px;
     margin-left: 80px;
+
 }
 
 .competition .konten {
@@ -138,14 +125,12 @@
     padding: 28px;
     width: 265px;
     height: 330px;
-    /* Mengatur lebar card (25% dari lebar konten - margin) */
     margin: 10px;
-    /* Memberikan margin antar card */
     box-sizing: border-box;
 
 }
 
-.competition .tampilan-card .gambar img{
+.competition .tampilan-card .gambar img {
     background: #d9d9d9;
     border-radius: 20px;
     width: 208px;
@@ -166,7 +151,7 @@
     text-align: left;
     font: 400 14px "Roboto-Regular", sans-serif;
     width: 234px;
-    height: 50px; 
+    height: 50px;
     margin-top: 15px;
     overflow: hidden;
     display: -webkit-box;
@@ -195,4 +180,246 @@
 
 .competition .spasing {
     height: 80px;
+}
+
+/* responsive breakpoint */
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 1020px) {}
+
+@media screen and (max-width: 800px) {
+    .competition .search-container h1 {
+        text-align: left;
+        color: #ffffff;
+        z-index: 3;
+        position: absolute;
+        top: 160px;
+        left: 45px;
+        color: white;
+        font-size: 38px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .competition .search-container p {
+        z-index: 3;
+        position: absolute;
+        top: 240px;
+        left: 45px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+    }
+
+    .competition .search-container .header-image {
+        z-index: 1;
+        display: block;
+        background-color: #fc724d;
+        border-bottom-left-radius: 8%;
+        border-bottom-right-radius: 8%;
+        height: 350px;
+    }
+
+    .competition .search-container .header-image img {
+        width: 100%;
+        height: 350px;
+        opacity: 40%;
+        object-fit: cover;
+        border-bottom-left-radius: 8%;
+        border-bottom-right-radius: 8%;
+    }
+    .competition .menu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        
+    }
+    .competition .menu .tombol {
+        border: none;
+        border-radius: 10px;
+        width: 115px;
+        height: 40px;
+        position: relative;
+        left: 45px;
+        margin-top: 20px;
+        background: #fc724d;
+        cursor: pointer;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom: 50px;
+    }
+
+    .competition .search-container {
+        width: 100%;
+        position: flex;
+        height: 350px;
+        z-index: 2;
+    }
+
+    .competition .all-categories {
+        padding: 5px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 50px;
+        margin-left: 10px;
+        justify-content: center;
+
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .competition .all-categories {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .competition .search-container h1 {
+        text-align: left;
+        color: #ffffff;
+        z-index: 3;
+        position: absolute;
+        top: 130px;
+        left: 40px;
+        color: white;
+        font-size: 32px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .competition .search-container p {
+        z-index: 3;
+        position: absolute;
+        top: 200px;
+        left: 40px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+    }
+
+    .competition .search-container .header-image {
+        z-index: 1;
+        display: block;
+        background-color: #fc724d;
+        border-bottom-left-radius: 8%;
+        border-bottom-right-radius: 8%;
+        height: 300px;
+    }
+
+    .competition .search-container .header-image img {
+        width: 100%;
+        height: 300px;
+        opacity: 40%;
+        object-fit: cover;
+        border-bottom-left-radius: 8%;
+        border-bottom-right-radius: 8%;
+    }
+
+    .competition .menu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        
+    }
+
+
+    .competition .search-container {
+        width: 100%;
+        position: flex;
+        height: 300px;
+        z-index: 2;
+    }
+
+    .competition .all-categories {
+        padding: 5px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: px;
+        margin-left: 10px;
+    }
+
+
+}
+
+@media screen and (max-width: 380px) {
+    .competition .search-container h1 {
+        text-align: left;
+        color: #ffffff;
+        z-index: 3;
+        position: absolute;
+        top: 130px;
+        left: 40px;
+        color: white;
+        font-size: 25px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .competition .search-container p {
+        z-index: 3;
+        position: absolute;
+        top: 180px;
+        left: 40px;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+    }
+
+    .competition .search-container {
+        width: 100%;
+        position: flex;
+        height: 200px;
+        z-index: 2;
+    }
+
+    .competition .search-container .header-image {
+        z-index: 1;
+        display: block;
+        background-color: #fc724d;
+        border-bottom-left-radius: 8%;
+        border-bottom-right-radius: 8%;
+        height: 200px;
+    }
+
+    .competition .search-container .header-image img {
+        width: 100%;
+        height: 200px;
+        opacity: 40%;
+        object-fit: cover;
+        border-bottom-left-radius: 8%;
+        border-bottom-right-radius: 8%;
+    }
+
+    .competition .menu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        
+    }
+
+    .competition .menu .tombol {
+        border: none;
+        border-radius: 10px;
+        width: 120px;
+        height: 40px;
+        position: relative;
+        left: 50px;
+        background: #fc724d;
+        cursor: pointer;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+
+
+
+
 }

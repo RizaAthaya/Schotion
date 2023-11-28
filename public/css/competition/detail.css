@@ -1,4 +1,4 @@
-.detailScholar{
+.detailCompe{
     padding-top: 80px;
     min-height: 100vh;
     display: flex;
@@ -6,11 +6,10 @@
     gap: 30px;
     margin-left: 80px;
     margin-right: 80px;
-    
 
 }
 
-.detailScholar .header-gambar img{
+.detailCompe .header-gambar img{
     width: 500px;
     height: 600px;
     opacity: 50%;
@@ -20,24 +19,83 @@
 
 }
 
-.detailScholar .konten-kontainer .kategori p{
+.detailCompe .konten-kontainer .kategori p{
     color: grey;
 }
 
-.detailScholar .konten-kontainer .deskripsi p{
+.detailCompe .konten-kontainer .deskripsi p{
     text-align: justify;
 }
 
-.detailScholar .konten-kontainer .penyelenggara p{
+.detailCompe .konten-kontainer .penyelenggara p{
     font-weight: bold;
 }
 
-.detailScholar .konten-kontainer .tanggal-mulai p{
+.detailCompe .konten-kontainer .tanggal-mulai p{
     font-weight: bold;
 }
 
-.detailScholar .konten-kontainer .tanggal-selesai p{
+.detailCompe .konten-kontainer .tanggal-selesai p{
     font-weight: bold;
 }
 
+@media screen and (max-width: 1000px){
+    .detailCompe{
+        flex-direction: column;
+    }
+    .detailCompe .header-gambar{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+    }
+    .detailCompe .konten-kontainer{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .detailCompe .header-gambar img{
+        width: 400px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .detailCompe{
+        margin-left: 40px;
+        margin-right: 40px;
+    
+    }
+    .detailCompe .header-gambar img{
+        width: 300px;
+        height: 380px;
+    }
+    .detailCompe .konten-kontainer .judul{
+        font-size: 15px;
+    }
+    .detailCompe .konten-kontainer .kategori p{
+        color: grey;
+    }
+    
+    .detailCompe .konten-kontainer .deskripsi p{
+        text-align: justify;
+        font-size: 10px;
+    }
+    
+    .detailCompe .konten-kontainer .penyelenggara p{
+        font-weight: bold;
+    }
+    
+    .detailCompe .konten-kontainer .tanggal-mulai p{
+        font-weight: bold;
+        font-size: 12px;
+    }
+    
+    .detailCompe .konten-kontainer .tanggal-selesai p{
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+}
 
