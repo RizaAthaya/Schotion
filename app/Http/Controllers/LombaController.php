@@ -68,7 +68,7 @@ class LombaController extends Controller
         $dataCompetition = Lomba::with('kategori')->get();
         $categories = KategoriLomba::all(); // Mengambil semua kategori lomba
 
-        return view('competition', ['competition' => $dataCompetition, 'categories' => $categories]);
+        return view('competition.index', ['competition' => $dataCompetition, 'categories' => $categories]);
     }
 
     public function searchCompetition(Request $request)
@@ -91,6 +91,23 @@ class LombaController extends Controller
         } catch (\Throwable $th) {
             // Tangani kesalahan jika terjadi
             return response()->json(['error' => $th->getMessage()], 500);
+        }
+    }
+
+    public function showDetail($id)
+    {
+        try {
+            // Logika untuk mendapatkan data beasiswa berdasarkan ID
+            $competition = Lomba::findOrFail($id);
+
+            $data = [
+                'competition' => $competition,
+            ];
+
+            return view('competition.detail', $data);
+        } catch (\Throwable $th) {
+            // Tangani kesalahan jika terjadi, misalnya redirect atau tampilkan pesan kesalahan
+            return redirect('/competition')->with('error', 'Gagal menampilkan detail lomba.');
         }
     }
 

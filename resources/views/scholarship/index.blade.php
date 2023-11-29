@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/scholarship/index.css">
+    <link rel="stylesheet" href="{{ asset('css/scholarship/index.css') }}">
+
     <title>scholarship</title>
 </head>
 
@@ -45,7 +46,7 @@
                     <div class="isi-konten">
                         {{ $item->deskripsi }}
                     </div>
-                    <a href="{{ url('/scholarship/detail/' . $item->id) }}" class="tombol">More</a>
+                    <a href="{{ url('/scholarship/detail/' . $item->id_beasiswa) }}" class="tombol">More</a>
                     
                 </div>
                 @endif
@@ -57,27 +58,27 @@
 
         <script>
             function showContent(category) {
-                // Tampilkan konten sesuai dengan kategori yang dipilih
+                
                 var allContents = document.getElementsByClassName('konten');
 
                 if (category == 'all') {
-                    // Jika kategori "all" dipilih, tampilkan semua konten
+                    
                     for (var i = 0; i < allContents.length; i++) {
                         allContents[i].style.display = 'flex';
                         allContents[i].style.flexWrap = 'wrap';
-                        // document.getElementById(category.toLowerCase()).style.display = 'flex';
+                        
                     }
                 } else {
-                    // Jika kategori selain "all" dipilih, sembunyikan semua konten
+                    
                     hideAllContent();
 
-                    // Tampilkan konten sesuai dengan kategori yang dipilih
+                    
                     document.getElementById(category.toLowerCase() + '-content').style.display = 'flex';
                 }
             }
 
             function hideAllContent() {
-                // Sembunyikan semua konten
+                
                 var allContents = document.getElementsByClassName('konten');
                 for (var i = 0; i < allContents.length; i++) {
                     allContents[i].style.display = 'none';
