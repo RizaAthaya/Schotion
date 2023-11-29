@@ -2,75 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Form Edit Scholarship Information</title>
-    <link rel="stylesheet" href="{{ asset('css/admin/scholarship/edit.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/admin/account/create.css') }}">
+    <title>Form Edit Admin Account</title>
 </head>
 
 <body>
 
     @include('navbar')
 
-    <div class="editScholarship">
+    <div class="createAccount">
         <div class="header">
-            <h1>Edit Scholarship Form</h1>
-            <p>Fill the blank to edit a scholarship information</p>
+            <h1>Edit account Form</h1>
+            <p>Fill the blank to update a valid account</p>
         </div>
         <div class="form-grid">
-            <form action="{{ route('admin.scholarship.update', ['id' => $beasiswa->id_beasiswa]) }}" method="post">
+            <form action="{{ route('admin.account.update', ['id' => $pengguna->id_pengguna]) }}" method="post">
                 @csrf
                 @method('PUT')
-                <div class="container-grid">
-                    <div class="left-grid">
-                        <!-- Kolom kiri -->
-                        <div class="form-group">
-                            <label for="nama">Name</label>
-                            <input type="text" id="nama" name="nama" required placeholder="Scholarship Name"
-                                value="{{ $beasiswa->nama }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="tanggal_mulai">Start Date</label>
-                            <input type="date" id="tanggal_mulai" name="tanggal_mulai" required
-                                value={{ $beasiswa->tanggal_mulai }}>
-                        </div>
-                        <div class="form-group">
-                            <label for="tanggal_berakhir">End Date</label>
-                            <input type="date" id="tanggal_berakhir" name="tanggal_berakhir" required
-                                value={{ $beasiswa->tanggal_berakhir }}>
-                        </div>
-                        <div class="form-group">
-                            <label for="penyelenggara">Providers</label>
-                            <input type="text" id="penyelenggara" name="penyelenggara" required
-                                value="{{ $beasiswa->penyelenggara }}" placeholder="Providers">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_kategori_beasiswa">Category</label>
-                            <select id="id_kategori_beasiswa" name="id_kategori_beasiswa" required>
-                                <option value="" disabled>Select Category</option>
-                                @foreach ($kategori as $category)
-                                    <option value="{{ $category->id_kategori_beasiswa }}"
-                                        @if ($category->id_kategori_beasiswa == $beasiswa->id_kategori_beasiswa) selected @endif>
-                                        {{ $category->nama }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
-
+                <div class="left-grid">
+                    <!-- Kolom kiri -->
+                    <div class="form-group">
+                        <label for="nama_lengkap">Name</label>
+                        <input type="text" id="nama_lengkap" name="nama_lengkap" required placeholder="Admin name"
+                            value="{{ $pengguna->nama_lengkap }}">
                     </div>
-                    <div class="right-grid">
-                        <!-- Kolom kanan -->
-                        <div class="form-group">
-                            <label for="deskripsi">Description</label>
-                            <textarea id="deskripsi" name="deskripsi" class="description-textarea" required>{{ $beasiswa->deskripsi }}</textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="link_gambar">Image Link</label>
-                            <input type="text" id="link_gambar" name="link_gambar" required
-                                value={{ $beasiswa->link_gambar }} placeholder="Link image">
-                        </div>
-                        <div class="button-container">
-                            <button type="submit">Update Scholarship</button>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" required placeholder="Email"
+                            value="{{ $pengguna->email }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="password baru">
+                    </div>
+                    <div class="form-group">
+                        <label for="id_peran">Role</label>
+                        <select id="id_peran" name="id_peran" required>
+                            <option value="" disabled selected>Select Role</option>
+                            @foreach ($peran as $role)
+                                <option value="{{ $role->id_peran }}" @if ($role->id_peran == $pengguna->id_peran) selected @endif>
+                                    {{ $role->nama }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">Edit account</button>
                     </div>
                 </div>
             </form>

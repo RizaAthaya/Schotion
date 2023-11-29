@@ -33,6 +33,7 @@ body {
     grid-gap: 20px;
     margin-bottom: 25px;
 }
+
 .createScholarship .container-grid .left-grid {
     display: flex;
     flex-direction: column;
@@ -96,4 +97,71 @@ body {
 
 .createScholarship .container-grid .right-grid .button-container button:hover {
     background: linear-gradient(to right, #be66be, #ffa500, #be66be);
+}
+
+@media screen and (max-width: 900px){
+    .createScholarship {
+        padding: 80px 35px;
+    }
+    .createScholarship .header {
+        padding: 10px 35px;
+    }
+    .createScholarship .header h1 {
+        font-size: 26px;
+    }
+    .createScholarship .header p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .createScholarship {
+        padding: 70px 40px;
+     
+    }
+    .createScholarship .header {
+        padding: 20px 40px;
+    }
+    .createScholarship .header {
+        padding: 25px 20px;
+    }
+    .createScholarship .header h1 {
+        font-size: 20px;
+    }
+
+    .createScholarship .header p {
+        font-size: 12px;
+    }
+    .createScholarship .container-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .createScholarship .form-group label {
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+
+    .createScholarship .form-group .description-textarea {
+        height: 130px;
+    }
+    .createScholarship .form-group input,
+    .form-group textarea, .form-group select {
+    padding: 8px;
+    height : 34px;
+}
+
+    .createScholarship input[type="text"],
+    .createScholarship input[type="date"],
+    .createScholarship select{
+        font-size: 10px; 
+    }
+    .createScholarship .container-grid .right-grid .button-container button {
+       
+        padding: 8px 18px;
+        font-size: 12px;
+    
+    }
+
 }

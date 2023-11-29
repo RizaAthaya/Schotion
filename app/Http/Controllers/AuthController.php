@@ -43,8 +43,10 @@ class AuthController extends Controller
     public function logout()
     {
         try {
-            Session::flush();
+            // dd(Auth::user()->peran->nama); // Tambahkan ini untuk mengecek role pengguna
+
             Auth::logout();
+            Session::flush();
             return redirect('/auth/login');
         } catch (\Exception $e) {
             dd($e->getMessage());

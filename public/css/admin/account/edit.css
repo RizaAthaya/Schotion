@@ -110,3 +110,72 @@ body {
 .createAccount .right-grid .button-container button:hover {
     background: linear-gradient(to right, #be66be, #ffa500, #be66be);
 }
+
+
+
+@media screen and (max-width: 900px){
+    .editAccount {
+        padding: 80px 35px;
+    }
+    .editAccount .header {
+        padding: 10px 35px;
+    }
+    .editAccount .header h1 {
+        font-size: 26px;
+    }
+    .editAccount .header p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .editAccount {
+        padding: 70px 40px;
+     
+    }
+    .editAccount .header {
+        padding: 20px 40px;
+    }
+    .editAccount .header {
+        padding: 25px 20px;
+    }
+    .editAccount .header h1 {
+        font-size: 20px;
+    }
+
+    .editAccount .header p {
+        font-size: 12px;
+    }
+    .editAccount .container-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .editAccount .form-group label {
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+
+    .editAccount .form-group .description-textarea {
+        height: 130px;
+    }
+    .editAccount .form-group input,
+    .form-group textarea, .form-group select {
+    padding: 8px;
+    height : 34px;
+}
+
+    .editAccount input[type="text"],
+    .editAccount input[type="date"],
+    .editAccount select{
+        font-size: 10px; 
+    }
+    .editAccount .container-grid .right-grid .button-container button {
+       
+        padding: 8px 18px;
+        font-size: 12px;
+    
+    }
+
+}

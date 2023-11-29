@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/competition.css">
+    <link rel="stylesheet" href="{{ asset('css/competition/index.css') }}">
     <title>competition</title>
 </head>
 
@@ -32,9 +32,10 @@
             @endforeach
         </div>
 
+        
         <div class="all-categories">
             @foreach ($categories as $category)
-            <div id="{{ strtolower($category->nama) }}-content" class="konten tambahan" >
+            <div id="{{ strtolower($category->nama) }}-content" class="konten">
                 @foreach ($competition as $item)
                 @if ($category->nama == 'all' || $item->kategori->nama == $category->nama)
                 <div class="tampilan-card">
@@ -45,7 +46,8 @@
                     <div class="isi-konten">
                         {{ $item->deskripsi }}
                     </div>
-                    <button class="tombol">More</button>
+                    <a href="{{ url('/competition/detail/' . $item->id_lomba) }}" class="tombol">More</a>
+
                 </div>
                 @endif
                 @endforeach
@@ -53,38 +55,45 @@
             @endforeach
 
         </div>
+        
+
 
 
 
         <script>
             function showContent(category) {
-                // Tampilkan konten sesuai dengan kategori yang dipilih
+                
                 var allContents = document.getElementsByClassName('konten');
 
                 if (category == 'all') {
-                    // Jika kategori "all" dipilih, tampilkan semua konten
+                    
                     for (var i = 0; i < allContents.length; i++) {
                         allContents[i].style.display = 'flex';
                         allContents[i].style.flexWrap = 'wrap';
-                        // document.getElementById(category.toLowerCase()).style.display = 'flex';
+                        
                     }
                 } else {
-                    // Jika kategori selain "all" dipilih, sembunyikan semua konten
+                    
                     hideAllContent();
 
-                    // Tampilkan konten sesuai dengan kategori yang dipilih
-                    document.getElementById(category.toLowerCase() + '-content').style.display = 'flex';
+                    
+                    var selectedContent = document.getElementById(category.toLowerCase() + '-content');
+                    if (selectedContent) {
+                        selectedContent.style.display = 'flex';
+                    }
                 }
             }
 
             function hideAllContent() {
-                // Sembunyikan semua konten
+                
                 var allContents = document.getElementsByClassName('konten');
                 for (var i = 0; i < allContents.length; i++) {
                     allContents[i].style.display = 'none';
                 }
             }
         </script>
+
+
 
 
 

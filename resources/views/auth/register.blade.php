@@ -19,7 +19,7 @@
         <div class="rightSection">
             <div class="text">
                 <h3 class="title">Registration Form</h3>
-                <h5>Already have an account? <a href="/auth/login">Login</a></h5>
+                <h5>Already have an account? Login</h5>
             </div>
             <form class="registerForm" action="{{ route('auth.register') }}" method="post">
                 @csrf
@@ -37,14 +37,13 @@
                 </div>
                 <div class="form-group">
                     <label for="password_confirmation">Confirm Password</label>
-                    <input type="password" id="password_confirmation" name="password_confirmation" required
-                        placeholder="Confirm Password">
+                    <input type="password" id="password_confirmation" name="password_confirmation" required placeholder="Confirm Password">
                 </div>
                 <div class="button-container">
                     <button type="submit">Register</button>
                 </div>
             </form>
-
+            
         </div>
     </div>
 

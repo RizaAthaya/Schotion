@@ -1,17 +1,17 @@
-.scholarship {
+.competition {
     padding-top: 80px;
     min-height: 100vh;
 
 }
 
-.scholarship .search-container {
+.competition .search-container {
     width: 1;
     position: flex;
     height: 400px;
     z-index: 2;
 }
 
-.scholarship .search-container h1 {
+.competition .search-container h1 {
     text-align: left;
     color: #ffffff;
     z-index: 3;
@@ -23,7 +23,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.scholarship .search-container p {
+.competition .search-container p {
     z-index: 3;
     position: absolute;
     top: 260px;
@@ -35,7 +35,7 @@
 
 }
 
-.scholarship .search-container .header-image {
+.competition .search-container .header-image {
     z-index: 1;
     display: block;
     background-color: #fc724d;
@@ -44,7 +44,7 @@
     height: 400px;
 }
 
-.scholarship .search-container .header-image img {
+.competition .search-container .header-image img {
     width: 100%;
     height: 400px;
     opacity: 40%;
@@ -54,13 +54,13 @@
 
 }
 
-.scholarship .menu {
+.competition .menu {
     position: relative;
     display: flex;
     gap: 10px;
 }
 
-.scholarship .menu .tombol {
+.competition .menu .tombol {
     border: none;
     border-radius: 10px;
     width: 135px;
@@ -76,25 +76,24 @@
     margin-bottom: 50px;
 }
 
-.scholarship .menu .tombol:hover {
+.competition .menu .tombol:hover {
     background-color: #ffffff;
     color: #fc724d;
     border: 2px solid #fc724d;
 }
 
 
-.scholarship .menu .tombol:active {
+.competition .menu .tombol:active {
     background-color: white;
 
 }
 
 
-.scholarship .menu .tombol:hover:active {
+.competition .menu .tombol:hover:active {
     background-color: white;
-
 }
 
-.scholarship .all-categories {
+.competition .all-categories {
     padding: 24px 0;
     display: flex;
     flex-wrap: wrap;
@@ -104,7 +103,7 @@
 
 }
 
-.scholarship .konten {
+.competition .konten {
     box-sizing: border-box;
     position: relative;
     inset: 0;
@@ -115,7 +114,7 @@
 }
 
 
-.scholarship .tampilan-card {
+.competition .tampilan-card {
     background: rgba(244, 244, 244, 0.5);
     border-radius: 30px;
     width: 265px;
@@ -130,7 +129,7 @@
 
 }
 
-.scholarship .tampilan-card .gambar img {
+.competition .tampilan-card .gambar img {
     background: #d9d9d9;
     border-radius: 20px;
     width: 208px;
@@ -138,7 +137,7 @@
 
 }
 
-.scholarship .tampilan-card .judul {
+.competition .tampilan-card .judul {
     color: #000000;
     text-align: center;
     font: 700 18px "Roboto-Bold", sans-serif;
@@ -146,7 +145,7 @@
 
 }
 
-.scholarship .tampilan-card .isi-konten {
+.competition .tampilan-card .isi-konten {
     color: #000000;
     text-align: left;
     font: 400 14px "Roboto-Regular", sans-serif;
@@ -160,7 +159,7 @@
 }
 
 
-.scholarship .tampilan-card .tombol {
+.competition .tampilan-card .tombol {
     display: inline-block;
     text-align: center;
     line-height: 28px;
@@ -178,7 +177,7 @@
     font-weight: bold;
 }
 
-.scholarship .spasing {
+.competition .spasing {
     height: 80px;
 }
 
@@ -188,7 +187,7 @@
 @media screen and (max-width: 1020px) {}
 
 @media screen and (max-width: 800px) {
-    .scholarship .search-container h1 {
+    .competition .search-container h1 {
         text-align: left;
         color: #ffffff;
         z-index: 3;
@@ -200,7 +199,7 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
-    .scholarship .search-container p {
+    .competition .search-container p {
         z-index: 3;
         position: absolute;
         top: 240px;
@@ -212,7 +211,7 @@
 
     }
 
-    .scholarship .search-container .header-image {
+    .competition .search-container .header-image {
         z-index: 1;
         display: block;
         background-color: #fc724d;
@@ -221,7 +220,7 @@
         height: 350px;
     }
 
-    .scholarship .search-container .header-image img {
+    .competition .search-container .header-image img {
         width: 100%;
         height: 350px;
         opacity: 40%;
@@ -229,13 +228,13 @@
         border-bottom-left-radius: 8%;
         border-bottom-right-radius: 8%;
     }
-    .scholarship .menu {
+    .competition .menu {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         
     }
-    .scholarship .menu .tombol {
+    .competition .menu .tombol {
         border: none;
         border-radius: 10px;
         width: 115px;
@@ -251,14 +250,14 @@
         margin-bottom: 50px;
     }
 
-    .scholarship .search-container {
+    .competition .search-container {
         width: 100%;
         position: flex;
         height: 350px;
         z-index: 2;
     }
 
-    .scholarship .all-categories {
+    .competition .all-categories {
         padding: 5px 0;
         display: flex;
         flex-wrap: wrap;
@@ -272,13 +271,13 @@
 }
 
 @media screen and (max-width: 750px) {
-    .scholarship .all-categories {
+    .competition .all-categories {
         margin-left: 10px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .scholarship .search-container h1 {
+    .competition .search-container h1 {
         text-align: left;
         color: #ffffff;
         z-index: 3;
@@ -290,7 +289,7 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
-    .scholarship .search-container p {
+    .competition .search-container p {
         z-index: 3;
         position: absolute;
         top: 200px;
@@ -302,7 +301,7 @@
 
     }
 
-    .scholarship .search-container .header-image {
+    .competition .search-container .header-image {
         z-index: 1;
         display: block;
         background-color: #fc724d;
@@ -311,7 +310,7 @@
         height: 300px;
     }
 
-    .scholarship .search-container .header-image img {
+    .competition .search-container .header-image img {
         width: 100%;
         height: 300px;
         opacity: 40%;
@@ -320,7 +319,7 @@
         border-bottom-right-radius: 8%;
     }
 
-    .scholarship .menu {
+    .competition .menu {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -328,14 +327,14 @@
     }
 
 
-    .scholarship .search-container {
+    .competition .search-container {
         width: 100%;
         position: flex;
         height: 300px;
         z-index: 2;
     }
 
-    .scholarship .all-categories {
+    .competition .all-categories {
         padding: 5px 0;
         display: flex;
         flex-wrap: wrap;
@@ -348,7 +347,7 @@
 }
 
 @media screen and (max-width: 380px) {
-    .scholarship .search-container h1 {
+    .competition .search-container h1 {
         text-align: left;
         color: #ffffff;
         z-index: 3;
@@ -360,7 +359,7 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
-    .scholarship .search-container p {
+    .competition .search-container p {
         z-index: 3;
         position: absolute;
         top: 180px;
@@ -372,14 +371,14 @@
 
     }
 
-    .scholarship .search-container {
+    .competition .search-container {
         width: 100%;
         position: flex;
         height: 200px;
         z-index: 2;
     }
 
-    .scholarship .search-container .header-image {
+    .competition .search-container .header-image {
         z-index: 1;
         display: block;
         background-color: #fc724d;
@@ -388,7 +387,7 @@
         height: 200px;
     }
 
-    .scholarship .search-container .header-image img {
+    .competition .search-container .header-image img {
         width: 100%;
         height: 200px;
         opacity: 40%;
@@ -397,20 +396,20 @@
         border-bottom-right-radius: 8%;
     }
 
-    .scholarship .menu {
+    .competition .menu {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         
     }
 
-    .scholarship .menu .tombol {
+    .competition .menu .tombol {
         border: none;
         border-radius: 10px;
-        width: 100px;
+        width: 120px;
         height: 40px;
         position: relative;
-        left: 25px;
+        left: 50px;
         background: #fc724d;
         cursor: pointer;
         color: #ffffff;
@@ -418,7 +417,6 @@
         font-size: 10px;
         margin-bottom: 20px;
     }
-
 
 
 

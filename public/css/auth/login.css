@@ -97,19 +97,3 @@
     border-radius: 20px;
     float: right;
 }
-
-@media screen and (max-width: 900px) {
-    .loginPage {
-        padding: 80px 25px;
-        min-height: 60vh;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    .leftSection, .rightSection {
-        width: 100%;
-    }
-    .leftSection img {
-        margin: auto;
-    }
-}
