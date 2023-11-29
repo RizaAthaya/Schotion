@@ -19,7 +19,7 @@
         <div class="rightSection">
             <div class="text">
                 <h3 class="title">Login Form</h3>
-                <h5>Don’t have an account? <a href="/auth/register">Register</a></h5>
+                <h5>Don’t have an account? Register</h5>
             </div>
             <form class="loginForm" action="{{ route('auth.login') }}" method="post">
                 @csrf

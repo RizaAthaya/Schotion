@@ -1,0 +1,101 @@
+.detailScholar{
+    padding-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+
+}
+
+.detailScholar .header-gambar img{
+    width: 500px;
+    height: 600px;
+    opacity: 50%;
+    background: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+
+}
+
+.detailScholar .konten-kontainer .kategori p{
+    color: grey;
+}
+
+.detailScholar .konten-kontainer .deskripsi p{
+    text-align: justify;
+}
+
+.detailScholar .konten-kontainer .penyelenggara p{
+    font-weight: bold;
+}
+
+.detailScholar .konten-kontainer .tanggal-mulai p{
+    font-weight: bold;
+}
+
+.detailScholar .konten-kontainer .tanggal-selesai p{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1000px){
+    .detailScholar{
+        flex-direction: column;
+    }
+    .detailScholar .header-gambar{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+    }
+    .detailScholar .konten-kontainer{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .detailScholar .header-gambar img{
+        width: 400px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .detailScholar{
+        margin-left: 40px;
+        margin-right: 40px;
+    
+    }
+    .detailScholar .header-gambar img{
+        width: 300px;
+        height: 380px;
+    }
+    .detailScholar .konten-kontainer .judul{
+        font-size: 15px;
+    }
+    .detailScholar .konten-kontainer .kategori p{
+        color: grey;
+    }
+    
+    .detailScholar .konten-kontainer .deskripsi p{
+        text-align: justify;
+        font-size: 10px;
+    }
+    
+    .detailScholar .konten-kontainer .penyelenggara p{
+        font-weight: bold;
+    }
+    
+    .detailScholar .konten-kontainer .tanggal-mulai p{
+        font-weight: bold;
+        font-size: 12px;
+    }
+    
+    .detailScholar .konten-kontainer .tanggal-selesai p{
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+}
+

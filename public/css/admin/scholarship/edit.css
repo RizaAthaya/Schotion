@@ -97,3 +97,69 @@ body {
 .editScholarship .container-grid .right-grid .button-container button:hover {
     background: linear-gradient(to right, #be66be, #ffa500, #be66be);
 }
+@media screen and (max-width: 900px){
+    .editScholarship {
+        padding: 80px 35px;
+    }
+    .editScholarship .header {
+        padding: 10px 35px;
+    }
+    .editScholarship .header h1 {
+        font-size: 26px;
+    }
+    .editScholarship .header p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .editScholarship {
+        padding: 70px 40px;
+     
+    }
+    .editScholarship .header {
+        padding: 20px 40px;
+    }
+    .editScholarship .header {
+        padding: 25px 20px;
+    }
+    .editScholarship .header h1 {
+        font-size: 20px;
+    }
+
+    .editScholarship .header p {
+        font-size: 12px;
+    }
+    .editScholarship .container-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .editScholarship .form-group label {
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+
+    .editScholarship .form-group .description-textarea {
+        height: 130px;
+    }
+    .editScholarship .form-group input,
+    .form-group textarea, .form-group select {
+    padding: 8px;
+    height : 34px;
+}
+
+    .editScholarship input[type="text"],
+    .editScholarship input[type="date"],
+    .editScholarship select{
+        font-size: 10px; 
+    }
+    .editScholarship .container-grid .right-grid .button-container button {
+       
+        padding: 8px 18px;
+        font-size: 12px;
+    
+    }
+
+}
